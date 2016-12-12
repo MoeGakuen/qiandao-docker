@@ -2,8 +2,8 @@ FROM alpine:latest
 RUN apk add --no-cache --update \
     python py-pip git wget autoconf automake build-base linux-headers python-dev supervisor && \
     pip install --upgrade pip setuptools tornado u-msgpack-python jinja2 chardet requests pbkdf2 && \
-    pip install pycrypto mysql-connector-python-rf --egg
-RUN mkdir -p /opt && \
+    pip install pycrypto mysql-connector-python-rf --egg && \
+    mkdir -p /opt && \
     cd /opt && \
     git clone https://github.com/binux/qiandao \
     --depth 1 --branch master --single-branch && \
