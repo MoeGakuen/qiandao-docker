@@ -5,11 +5,11 @@ RUN apk add --no-cache --update \
     pip install pycrypto mysql-connector-python-rf --egg && \
     mkdir -p /opt && \
     cd /opt && \
-    git clone https://github.com/binux/qiandao \
+    git clone https://github.com/MoeGakuen/qiandao \
     --depth 1 --branch master --single-branch && \
     cd qiandao && \
     rm config.py && \
-    wget https://gist.github.com/legendtang/bef8ae767e892ed2affdb781bb751733/raw/d67313e68432be79e3fec6c04a073422f8be1bf9/config.py && \
+	wget https://gist.githubusercontent.com/MoeGakuen/731e37e8c439f2edc80fca19a445a4d0/raw/d7c56d75ac24656c96bb11429b598a88587cca50/config.py && \
     apk del build-base linux-headers python-dev autoconf automake wget py-pip && \
     rm -rf /var/cache/apk/*
 
